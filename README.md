@@ -1,5 +1,5 @@
 # idiometry: an idiom search engine
-A Flask-React project for serving the user interface and pre/post processing of idiom specific searches to an Elasticsearch database.
+A Flask-React project for serving the user interface and pre/post processing of idiom specific searches to an Elasticsearch database. A demo is available here: https://datainnovation.cardiff.ac.uk/idiometry/
 
 ## Set Up
 The following will install the packages according to the configuration:
