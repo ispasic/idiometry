@@ -1,0 +1,52 @@
+{
+  "from":0,
+  "highlight":{
+    "fields":{
+      "sentence":{
+        "fragment_size":1000,
+        "number_of_fragments":1,
+        "post_tags":"</idiom>",
+        "pre_tags":"<idiom>"
+      }
+    }
+  },
+  "query":{
+    "bool":{
+      "should":[
+        {
+          "match_phrase":{
+            "sentence":{
+              "query":"call someone’s bluff",
+              "slop":4
+            }
+          }
+        },
+        {
+          "match_phrase":{
+            "sentence":{
+              "query":"call * bluff",
+              "slop":5
+            }
+          }
+        },
+        {
+          "match_phrase":{
+            "sentence":{
+              "query":"someone's bluff * call",
+              "slop":5
+            }
+          }
+        },
+        {
+          "match_phrase":{
+            "sentence":{
+              "query":"*  bluff * call",
+              "slop":6
+            }
+          }
+        }
+      ]
+    }
+  },
+  "size":100
+}
