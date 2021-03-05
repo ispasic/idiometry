@@ -42,9 +42,10 @@ const AboutInfo = () => {
         Idiometry is described in detail in the following publication:
       </Paragraph>
       <Paragraph marginBottom={20}>
-        Callum Hughes, Maxim Filimonov, Alison Wray, Irena Spasić (2020) Leaving
+        Callum Hughes, Maxim Filimonov, Alison Wray, Irena Spasić (2021) Leaving
         no stone unturned: Flexible retrieval of idiomatic expressions from a
-        large text corpus. Language Resources and Evaluation, under review.
+        large text corpus. Machine Learning and Knowledge Extraction, Vol. 3,
+        No. 1, pp. 263-283
       </Paragraph>
       <Paragraph marginBottom={20}>
         Please use this reference to cite Idiometry.
