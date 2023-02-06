@@ -27,6 +27,9 @@ def pre_post_process_search():
     size = request.args.get('s') or Exception
     from_position = request.args.get('f') or 0
 
+    # remove html tags from the search query
+    search_idiom = remove_html_tags(search_idiom)
+
     # remove "to" at the beginning if the first word is infinitive form of a verb
     search_idiom = split_infinitive(search_idiom)
 
@@ -71,6 +74,9 @@ def process_explanation_search():
     # the results through the search API also show the original highlight which adds to the explanation
     search_idiom = request.args.get('search_idiom').lower() or Exception
     file_id = request.args.get('file_id') or Exception
+
+    # remove html tags from the search query
+    search_idiom = remove_html_tags(search_idiom)
 
     tagged_idiom = pos_tag_idiom(search_idiom)
     slop = calculate_slop(tagged_idiom)

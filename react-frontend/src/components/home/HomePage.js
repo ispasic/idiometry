@@ -74,6 +74,8 @@ const HomePage = () => {
         config,
       })
       .then((r) => {
+        // strip html tags from string
+        queryInput = queryInput.replaceAll(/<.*?>/gi, '');
         setSentQuery(queryInput);
         setIsLoading(false);
         setResultsPageNumber(1);

@@ -1,0 +1,7 @@
+# node_modules
+react-frontend/node_modules
+# built frontend
+flask-backend/static/react
+flask-backend/templates
+# pycache
+__pycache__

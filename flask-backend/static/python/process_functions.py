@@ -50,6 +50,13 @@ def send_query_to_DB_endpoint(query, index):
     result = json.loads(requests.get(url, headers=HEADERS, data=json.dumps(query)).text)
     return result
 
+def remove_html_tags(search_idiom):
+    # compile regex to search for tags
+    CLEANR = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
+    # remove all html tags from the search idiom before doing analysis
+    clean_idiom = re.sub(CLEANR, '', search_idiom)
+
+    return clean_idiom
 
 def split_infinitive(search_idiom):
     # remove "to" at the beginning if the first word is the infinitive form of a verb
