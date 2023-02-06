@@ -65,6 +65,10 @@ const HomePage = () => {
 
   const getNewResults = async (queryInput, size = resultsPerPage) => {
     setIsLoading(true);
+    
+    // normalize string to be compatible with Unicode
+    queryInput = queryInput.normalize('NFKC');
+
     axios
       .get("/api/search_sentences/", {
         params: {
